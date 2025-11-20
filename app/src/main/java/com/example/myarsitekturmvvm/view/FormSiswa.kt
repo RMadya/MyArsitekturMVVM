@@ -73,3 +73,6 @@ fun FormSiswa(
                     .padding(top = 20.dp)
             )
 
+            Spacer(Modifier.height(20.dp))
+
+            // 🔹 Gender
