@@ -37,3 +37,17 @@ fun SiswaApp(
             modifier = Modifier.padding(isiRuang)
         ) {
 
+            // 🔹 Halaman Form
+            composable(Navigasi.Formulirku.name) {
+                val ctx = LocalContext.current
+                FormSiswa(
+                    pilihanJK = Jenisk.map { id ->
+                        ctx.resources.getString(id)
+                    },
+                    OnSubmitBtnClick = { hasilForm ->
+                        viewModel.setSiswa(hasilForm)
+                        navController.navigate(Navigasi.Detail.name)
+                    }
+                )
+            }
+
